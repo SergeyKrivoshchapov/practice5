@@ -38,7 +38,7 @@ int main()
 
 	int i;
 	read(fd, &i, sizeof(i));
-	print_bytes(&s, sizeof(s));
+	print_bytes(&i, sizeof(i));
 
 	int i_arr[N];
 	read(fd, i_arr, sizeof(i_arr));

@@ -19,9 +19,8 @@ int main()
 
         lseek(fd, 1, SEEK_SET); // char
 
-        char arr[C+1];
+        char arr[C];
         read(fd, arr, C);
-        arr[C] = '\0';
 
         int arr_half = C / 2;
         for (int i = 0; i < arr_half; i++)
@@ -32,7 +31,7 @@ int main()
         }
 
         lseek(fd, 1, SEEK_SET);
-        write(fd, arr, sizeof(arr)); 
+        write(fd, arr, C); 
         
         if (close(fd) == -1)
         {
